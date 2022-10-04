@@ -236,5 +236,31 @@ myFun('345')      // This activates the function
   
   
   
+   
+
+<input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
+                                                                                 
+ class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+
+    myShow(){
+       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+
+ }  // end class myAnimal
+                                                             
+   
+                                                                                 
+   myDog = new myAnimal('Snickers', 12)
+   myDog.myShow()                                                       
+}"><br><br>
+
+<div id='myDiv130'>...</div><br>
+  
+  
+  
   
 
