@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-2</h5>
+<h5>Version 0.0.1-3</h5>
 
 <h2 align=center>t1a06-variables-by-Fredhtml</h2>
 
@@ -10,13 +10,23 @@ Note: Javascript does use var and let for local variables.<br>
 For Global variables Mr. Ellis prefers to use document.myVarName
 
 <h4> Example input output code</h4>
+<pre>
+let myIn01 = document.getElementById('myText01').value
+document.getElementById('myDiv01').innerHTML = myInt01
 </pre>
+
 <h4> Example working code</h4>
-<input id="myText01" type=text value="The dog " ><br>
+
+<input id="myText01" type=text value="The dog" ><br>
 
 <input type=button value="Show Variable" onclick="{
                                                   let myInt01 = document.getElementById('myText01').value
-                                                  document.getElementById('myDiv01').innerHTML =
-                                                  document.getElementById('mText01').value
+                                                  document.getElementById('myDiv01').innerHTML = myInt01
+                                                  
                                                   }"><br>
+<input type=button value="Using no variable" onclick="{
+                                                      document.getElementById('myDiv01').innerHTML =
+                                                      document.getElementByID('myText01').value
+                                                      }><br>
+                                                      
 <div id="myDiv01">...</div>
