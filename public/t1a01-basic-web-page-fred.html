@@ -40,7 +40,7 @@ body {
 
 <div class="header">
   <h1>Hannah's Basic Webpage</h1>
-  <p>Version 0.0.1-8</p>
+  <p>Version 0.0.1-9</p>
 </div>
 <div class="navbar">
   <a href="https://hannahtt25.github.io/gamedev2022/public/">Back To My Index Page</a>
@@ -74,16 +74,27 @@ body {
                                                                                
                                                                                <h3> Write about Ellis' 10 main areas of coding</h3>
   <input type=button value="0. Pseudo Code" onclick="{
-                                                     document.getElementById('myDiv01').innerHTML = Hello don\'t World'
-                                                     }">
+                                                 document.getElementById('myDiv01').innerHTML = Hello don\'t World'
+                                                     }"><br>
                                                                                
                                                                                <input type=button value="1. Input/Output" onclick={
-                                                                                      document.getElementById('getDiv01').innerHTML = 'Input adahwudhawhfiwae<br>' + Hi<br>Hello<br>output is...'
-                                                                                                                         }">
+                                                                                      document.getElementById('getDiv01').innerHTML = 'Input adahwudhawhfiwae<br>' + 'Hi<br>Hello<br>output is...'                                                             }"><br>
+                                                                                      <button id="myButton01" value="Beep Boop!" onclick="myFunction()">2. Variables</button>
+
+<p id="myTest01"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myButton01").value;
+  document.getElementById("myTest01").innerHTML = x;
+}
+</script>
+                                                                                      
+                                                                                      
+                                                                                      
       <input type=button value="4. Decisions" onclick="{
-                                                       document.getElementById('myDiv01').innerHTML=
-                                                       Decision use the if statement to make true
-                                                       false variable decisions<br>
+                                                       document.getElementById('myDiv01').innerHTML=`
+                                                       Decision use the if statement to make true false variable decisions<br>
                                                        <pre>
                                                        if (hour < 18) {
                                                        greeting = \ 'Good day\';
@@ -91,8 +102,9 @@ body {
                                                        </pre>
                                                        
                                                        `}"><br>
-      You do: 2:variables, 3:loops, 5:functions, 6:events, 7:arrays, 8:objects, 9:classes<br>
+     
       
       <div id="myDiv01">...</div>
     <body>
       </html>
+You do: 2:variables, 3:loops, 5:functions, 6:events, 7:arrays, 8:objects, 9:classes<br>
