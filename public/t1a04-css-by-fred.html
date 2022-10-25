@@ -4,11 +4,12 @@
 body {background-color: lightpink;}
 h1   {color: blue;}
 p    {color: red;}
+  h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
 </style>
 </head>
 <body>
-Version 0.0.1-7</br>
-<h1 align=center><h1 style="color:white;">T1A04 CSS by Fred</h1>
+Version 0.0.1-8</br>
+  <h1 align=center><h1 style="color:white;">CSS Website</h1>
 Reference Link
 <a href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br>
 <hr>
@@ -27,10 +28,43 @@ I do CSS inside the tag. It overpowers all other methods<br>
 <b > This is bold<b/><br>
   <b id ="myB1" style="color:#00ff00; background-Color:blue; "> This is bold</b>
   <input type=button value=Change onclick="{
-document.getElementById('myB1').style.color = 'red'
-document.getElementById('myB1').style.backgroundColor = 'yellow'
+document.getElementById('myB1').style.color = 'white'
+document.getElementById('myB1').style.backgroundColor = 'black'
 }"><br>
                                            
 <textarea style="position:relative; left:0; top:0; width:200; height:50; ">
                                                                           Advanced see if you move this textarea
 </textarea><br>
+  <style>
+	.box {
+		background-color: white;
+		font-size: 50px;
+		padding: 40px;
+		margin: 20px;
+		border: solid;
+	}
+</style>
+
+<div class="box">Textbox inside textbox with gradient transparent background.
+  <hr>
+  <style>
+body {
+    background-image:    url('https://wallpaperaccess.com/full/220641.jpg');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;             
+}
+	.myBox01 {
+		font-size: 50px;
+      	height:200px;
+		padding: 20px;
+		border: solid;
+		background: linear-gradient(grey -200px, transparent);
+	}
+</style>
+
+<div class="myBox01">Grey Gradient in textbox with transparent background</div>
+  
+  Testing image with fonts
+  Change title with font and add navbar with transparent background with title.
+  
