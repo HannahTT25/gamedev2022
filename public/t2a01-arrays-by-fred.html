@@ -1,4 +1,4 @@
-Version 0.0.1-1
+Version 0.0.1-2
 
 <h2 align=center>t2a01-arrays-by-Fred.html</h2>
 
@@ -34,6 +34,35 @@ Max Array Entry: |<input type=text id="myText01" value="3"><br>
 <div id="myDiv01">...</div>
 
 <br>
+<div class="button-holder"></div>
+<style>
+@import "compass/css3";
+
+.button-holder {
+  button {
+  border: 1px solid #333;
+  margin: 0 0 5px 5px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #111;
+  padding: 0.5em;
+  cursor: pointer;
+  }
+</style>
+<body>
+<hr>
+var buttons = ["Test1", "Test2", "Test3", "Test4"];
+
+function makeButtons(c) {
+  for (var i = 0; i < c.length; i++) {
+    $('.button-holder').append('<button value=' + c[i] + '>' + c[i] +
+      '</button>');
+  }
+}
+
+makeButtons(buttons);
                                                     
                                                    
                                                     
