@@ -1,4 +1,4 @@
-Version 0.0.1-3
+Version 0.0.1-4
 
 <h2 align=center>t2a02-objects-by-Fred.html</h2>
 
@@ -44,4 +44,28 @@ document.getElementById("test01").innerHTML = person.firstname + " is " + person
 </script>
 
 </body>
+<h2>Objects and Arrays of Genders.</h2>
+<p id="test02"></p>
+
+<script>
+let x = "";
+const myObj = {
+  name: "John",
+  age: 30,
+  genders: [
+    {name:"Male", gen:["Liam", "James", "Jack"]},
+    {name:"Female", gen:["Charlotte", "Ava", "Alice"]},
+    {name:"Others", gen:["Arden", "Rebel", "Valen", "Trinity"]}
+  ]
+}
+
+for (let i in myObj.genders) {
+  x += "<h2>" + myObj.genders[i].name + "</h2>";
+  for (let j in myObj.genders[i].gen) {
+    x += myObj.genders[i].gen[j] + "<br>";
+  }
+}
+
+document.getElementById("test02").innerHTML = x;
+</script>
 </html>
