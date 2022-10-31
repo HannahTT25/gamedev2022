@@ -1,4 +1,4 @@
-Version 0.0.1-2
+Version 0.0.1-4
 
 <h2 align=center>t2a01-arrays-by-Fred.html</h2>
 
@@ -53,16 +53,28 @@ Max Array Entry: |<input type=text id="myText01" value="3"><br>
 </style>
 <body>
 <hr>
-var buttons = ["Test1", "Test2", "Test3", "Test4"];
+<h2>JavaScript Array</h2>
 
-function makeButtons(c) {
-  for (var i = 0; i < c.length; i++) {
-    $('.button-holder').append('<button value=' + c[i] + '>' + c[i] +
-      '</button>');
-  }
-}
+<p id="test01"></p>
 
-makeButtons(buttons);
-                                                    
-                                                   
-                                                    
+<script>
+const names = [" Chloe", " Melissa", " Morgan"];
+document.getElementById("test01").innerHTML = names;
+</script>
+  <hr>
+  <body>
+
+<h2>JavaScript Array Sort</h2>
+<p>Array in ascending order:<br> Array in descending order:</p>
+
+<p id="test02"></p>
+<p id="test03"></p>
+
+<script>
+const points = [50, 200, 1, 5, 25, 10, 150, 2000];
+document.getElementById("test02").innerHTML = points;  
+points.sort(function(a, b){return a - b});
+document.getElementById("test03").innerHTML = points;
+</script>
+
+</body>
