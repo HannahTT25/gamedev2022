@@ -1,14 +1,63 @@
-<html>
-<head>
 <style>
-body {background-color: grey;}
-h1   {color: blue;}
-p    {color: red;}
-  h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+  body {
+	font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+    background: linear-gradient(to right, #FF7F50,#D8BFD8); 
+}
+
+h1 {
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+    color :linear-gradient(to right, #FF7F50,#D8BFD8)
+}
+
+
+h3 {
+	font: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+
+}
 </style>
-</head>
+<body id="gradient">
+
+    <h1>CSS Website</h1>
+    <input type="color" class="color1"   value="#FF7F50">
+    <input type="color" class="color2"  value="#D8BFD8">
+	<h2>Background Generator</h2>
+    <h3></h3>
+    <script>
+	  var css= document.querySelector("h3");
+    var color1 = document.querySelector(".color1");
+    var color2 = document.querySelector(".color2");
+    var body = document.getElementById("gradient");
+    
+    
+    color1.addEventListener("input",function(){
+        console.log(color1.value);
+        body.style.background ="linear-gradient(to right,"+color1.value+", "+color2.value+")";
+        css.textContent = body.style.background;
+    });
+    color2.addEventListener("input",function(){
+        body.style.background ="linear-gradient(to right,"+color1.value+", "+color2.value+")"; 
+        css.textContent = body.style.background;
+    });
+  
+	
+	</script>
+</body>
 <body>
-Version 0.0.1-9</br>
+  Version 0.0.1-13</br>
   <h1 align=center><h1 style="color:white;">CSS Website</h1>
 Reference Link
 <a href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br>
@@ -74,4 +123,3 @@ div {
 </body>
 </html>
 <hr>
-
