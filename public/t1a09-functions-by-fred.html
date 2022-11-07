@@ -6,7 +6,7 @@
     return myReply
   }
 </script>
-Version 0.0.1-3
+Version 0.0.1-4
 
 <h2 align=center>t1a09-functions-by-Fred.html</h2>
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
@@ -38,3 +38,30 @@ function myFunction(p1, p2) {
 document.getElementById("adding").innerHTML = myFunction(4, 3);
 </script>
 <hr>
+  <hr>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="crazy">
+
+<button type="button" onclick="myNum()">Submit</button>
+
+<p id="number"></p>
+
+<script>
+function myNum() {
+
+  let x = document.getElementById("crazy").value;
+
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "I told you to pick between 1-10 >:(";
+  } else {
+    text = "Valid number";
+  }
+  document.getElementById("number").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
