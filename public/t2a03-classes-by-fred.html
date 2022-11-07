@@ -1,8 +1,8 @@
-Version 0.0.1-2
+Version 0.0.1-3
 
 <h2 align=center>t2a03-Classes-by-Fred.html</h2>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Find a good reference to Javascript Classes</a><br>
+<a href="">Find a good reference to Javascript Classes</a><br>
 
 Classes are both Objects that store variables (Called Properties) and Functions that work on the variables (called Methods)
 
@@ -22,16 +22,47 @@ myDog.myShow()
 <h4> Example working Classes code</h4>
 Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 <input type=button value="Example Class Set and Show Class Animal" onClick="{
-    class myAnimal {
-    constructor(passName, passAge) {
-    this.myName = passName
-    this.myAge = passAge
-  }
-    myShow(){
-    document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
-  }                                                                           
-} // end class myAnimal
-    myDog = new myAnimal('Snickers', 5)
-    myDog.myShow()
-  }">
+                                                                            class myAnimal {
+                                                                            constructor(passName, passAge) {
+                                                                            this.myName = passName
+                                                                            this.myAge = passAge
+                                                                            }
+ myShow(){
+                                                                            document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+                                                                            }                                                                           } // end class myAnimal
+                                                                            myDog = new myAnimal('Snickers', 5)
+                                                                            myDog.myShow()
+                                                                            }">
        <div id="myDiv01">...</div>
+
+<hr>
+
+<html>
+<body>
+
+<h4>JavaScript Class Method</h4>
+
+<p>Defining and using Class method<p>
+
+<p id="child"></p>
+
+<script>
+class Baby {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+let myBaby = new Baby("Christian", 2007);
+document.getElementById("child").innerHTML =
+"My child is " + myBaby.age() + " years old.";
+</script>
+
+</body>
+</html>
