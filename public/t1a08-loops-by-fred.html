@@ -1,4 +1,4 @@
-Version 0.0.1-5
+Version 0.0.1-6
 <h2 align=center>t1a08-loops-by-Fred.html</h2>
 <a href="">Good reference to Javascript Loops</a><br>
 
@@ -40,3 +40,17 @@ Loop this many times
 }"><br><br>
 
 <div id='myDiv02'>...</div><br> 
+<hr>
+<h4>Fruit For Loop (Haha Fruit Loop)</h4>
+
+<p id="fruit"></p>
+
+<script>
+const apples = ["Cripps Pink", "Empire", "Fuji", "Gala", "Golden Delicious", "Granny Smith"];
+
+let text = "";
+for (let i = 0; i < apples.length; i++) {
+  text += apples[i] + "<br>";
+}
+
+document.getElementById("fruit").innerHTML = text;
