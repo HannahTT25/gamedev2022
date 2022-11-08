@@ -95,6 +95,23 @@ document.getElementById("fruit").innerHTML = text;
 
 <script>
 const count = [45, 4, 9, 16, 25];
+  <hr>
+    <h4>JavaScript For In Loop</h4>
+<p>Loops through the properties of an object:</p>
+
+<p id="human"></p>
+
+<script>
+const person = {fname:"Mary", lname:"Hanson", age:20};
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("human").innerHTML = txt;
+</script>
+
 
 let txt = "";
 for (let x in count) {
