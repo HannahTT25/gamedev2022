@@ -6,22 +6,29 @@ Version 0.0.1-5
 <pre>
 </pre>
 
-<h4> Example working code</h4>Max loops: <input id="myNum01" type=number value ="4" ><br>
-  
-  <input type=button value="Basic For loop with Decisions" onclick="{
-      document.getElementById('myDiv01').innerHTML = ''
-      let myTemp=''
-      let myMax= parseInt(document.getElementById('myNum01').value)
-      for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+<h4> Example working code</h4>
+
+Max loops: <input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="Basic For loop with Decisions" onclick="{
+    document.getElementById('myDiv01').innerHTML = ''
+    let myTemp = ''
+    let myMax = parseInt(document.getElementById('myNum01').value)
+   
+    for (let myLoop = 0; myLoop < myMax; myLoop++ ){
       if (myLoop * 2 > myMax){
-      myTemp += 'cool'
+        myTemp+= ' cool '
     }
-      myTemp += 'Loop number: '+ myLoop+ '<br>'
-    }
-      document.getElementById('myDiv01').innerHTML= myTemp
-}">
+                                                                  
+        myTemp += 'Loop number: ' + myLoop + '<br>'
+      }
+      document.getElementById('myDiv01').innerHTML = myTemp
+    }">
+
+<div id="myDiv01">...</div>
 <br>
-Loop this many times<input type="number" id="myTextLoop" value="10" size="10"><br>
+Loop this many times
+<input type="number" id="myTextLoop" value="10" size="10"><br>
     
     <input id="myButton02" type="button" value="For Loop" onclick="{
     document.getElementById('myDiv02').innerHTML = '' 
