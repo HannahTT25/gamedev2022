@@ -1,4 +1,4 @@
-Version 0.0.1-6
+Version 0.0.1-7
 <h2 align=center>t1a08-loops-by-Fred.html</h2>
 <a href="">Good reference to Javascript Loops</a><br>
 
@@ -54,3 +54,17 @@ for (let i = 0; i < apples.length; i++) {
 }
 
 document.getElementById("fruit").innerHTML = text;
+<hr>
+    <h4>The for in statement can loops over array values:</h4>
+
+<p id="nums"></p>
+
+<script>
+const count = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in count) {
+  txt += count[x] + "<br>"; 
+}
+
+document.getElementById("nums").innerHTML = txt;
