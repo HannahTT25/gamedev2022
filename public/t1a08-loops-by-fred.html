@@ -1,4 +1,4 @@
-Version 0.0.1-11
+Version 0.0.1-12
 <html>
 <head>
 <style>
@@ -122,3 +122,20 @@ document.getElementById("nums").innerHTML = txt;
 </script>
 
 </body>
+<hr>
+<h4>JavaScript For of Loop</h4>
+
+<p>The for of statement loops through the values of an iterable object.</p>
+
+<p id="letters"></p>
+
+<script>
+let abc = "Alphabet";
+
+let texts = "";
+for (let x of abc) {
+  texts += x + "<br>";
+}
+
+document.getElementById("letters").innerHTML = texts;
+</script>
