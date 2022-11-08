@@ -88,41 +88,6 @@ document.getElementById("fruit").innerHTML = text;
 </body>
 </html>
 <hr>
-<body>
-<h4>Loops over array values:</h4>
-
-<p id="nums"></p>
-
-<script>
-const count = [45, 4, 9, 16, 25];
-  <hr>
-    <h4>JavaScript For In Loop</h4>
-<p>Loops through the properties of an object:</p>
-
-<p id="human"></p>
-
-<script>
-const person = {fname:"Mary", lname:"Hanson", age:20};
-
-let txxt = "";
-for (let x in person) {
-  txxt += person[x] + " ";
-}
-
-document.getElementById("human").innerHTML = txxt;
-</script>
-
-
-let txxt = "";
-for (let x in count) {
-  txt += count[x] + "<br>"; 
-}
-
-document.getElementById("nums").innerHTML = txt;
-</script>
-
-</body>
-<hr>
 <h4>JavaScript For of Loop</h4>
 
 <p>The for of statement loops through the values of an iterable object.</p>
@@ -139,3 +104,21 @@ for (let x of abc) {
 
 document.getElementById("letters").innerHTML = texts;
 </script>
+<hr>
+<body>
+
+<h4>JavaScript While Loop</h4>
+
+<p id="20"></p>
+
+<script>
+let numm = "";
+let i = 0;
+while (i < 21) {
+  numm += "<br>Loop: " + i;
+  i++;
+}
+document.getElementById("20").innerHTML = numm;
+</script>
+
+</body>
