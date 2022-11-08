@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-7</h5>
+<h5>Version 0.0.1-9</h5>
 
 <h2 align=center>t1a06-variables-by-Fred.html</h2>
 
@@ -28,3 +28,35 @@ For Global variables Mr. Ellis prefers to use document.myVarName
       document.getElementById('myText01').value
 }"><br>
 <div id="myDiv01">...</div>
+<hr>
+<h4>JavaScript Variables</h4>
+
+<p>In this example, x, y, and z are variables.</p>
+
+<p id="variables"></p>
+
+<script>
+var x = 5;
+var y = 5;
+var z = x + y;
+document.getElementById("variables").innerHTML =
+"x + y = z <br> z= " + z;
+</script>
+<hr>
+<body>
+
+<h4>JavaScript Variables</h4>
+
+<p>Price 1, price 2, and total are variables.</p>
+
+<p id="money"></p>
+
+<script>
+const price1 = 500;
+const price2 = 20;
+let total = price1 + price2;
+document.getElementById("money").innerHTML =
+"The total is: " + total;
+</script>
+
+</body>
