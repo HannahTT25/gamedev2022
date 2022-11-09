@@ -1,0 +1,22 @@
+<script>
+function calcSalary() {
+ var wage = parseFloat(document.getElementById('txt_wage').value);
+ var hours = parseFloat(document.getElementById('txt_hours').value);
+ var calculate = wage * hours * 52;
+ 
+ document.getElementById('results').innerHTML = calculate;
+}
+</script>
+Version 0.0.1-1
+<h1 align=center>t2a12-pay-by-fred.html</h1>
+<div id="fulldiv">
+ <p> Enter the following information to calculate your annual salary.</p>
+ <label for="txt_wage">Hourly Wage:</label>
+ <input type="text" name="wage" id="txt_wage" value ="0.00"/>
+					
+ <label for="txt_hours">Hours Per Week:</label>
+ <input type="text" name="hours" id="txt_hours" value= "0.0"/>   
+  <br/><br/>
+ <button value="calculate" onclick="calcSalary()">Calculate</button>
+ <p id="results"></p>
+</div>
