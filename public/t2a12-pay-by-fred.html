@@ -2,15 +2,15 @@
 function calcSalary() {
  var wage = parseFloat(document.getElementById('txt_wage').value);
  var hours = parseFloat(document.getElementById('txt_hours').value);
- var calculate = wage * hours * 52;
+ var calculate = wage * hours * 48;
  
  document.getElementById('results').innerHTML = calculate;
 }
 </script>
-Version 0.0.1-1
+Version 0.0.1-2
 <h1 align=center>t2a12-pay-by-fred.html</h1>
 <div id="fulldiv">
- <p> Enter the following information to calculate your annual salary.</p>
+ <p> Enter the following information to calculate your annual salary.<br> Assuming you took 4 weeks off total for vacation and holidays of your 52 weeks in a year.</p>
  <label for="txt_wage">Hourly Wage:</label>
  <input type="text" name="wage" id="txt_wage" value ="0.00"/>
 					
@@ -20,3 +20,95 @@ Version 0.0.1-1
  <button value="calculate" onclick="calcSalary()">Calculate</button>
  <p id="results"></p>
 </div>
+
+<br>
+<h2>British Columbia Average Annual Salary Rate</h2>
+<style>
+    table.tb { border: 0; width:300px; }
+    .tb th, .tb td { padding: 5px; border: solid 1px #777; }
+    .tb th { background-color: lightblue;}
+  </style>
+  <table class="tb" id="members">
+    <tr>
+      <th>Annual salary</th>
+      <th>Hourly rate</th>
+  
+    </tr>
+    <tr>
+     <td>$25,000</td>
+  <td>$13.02</td>
+  
+    </tr>
+    <tr>
+        <td>$30,000</td>
+  <td>$15.63</td>
+  
+    </tr>
+    <tr>
+       <td>$35,000</td>
+  <td>$18.23</td>
+  
+    </tr>
+     <tr>
+        <td>$40,000</td>
+  <td>$20.83</td>
+    <tr>
+       <td>$45,000</td>
+  <td>$23.44</td>
+  
+    </tr>
+      <tr>
+       <td>$50,000</td>
+  <td>$26.04</td>
+  
+    </tr>
+      <tr>
+       <td>$55,000</td>
+  <td>$28.65</td>
+  
+    </tr>
+      <tr>
+       <td>$60,000</td>
+  <td>$31.25</td>
+  
+    </tr>
+      <tr>
+       <td>$65,000</td>
+  <td>$33.85</td>
+  
+    </tr>
+        <tr>
+       <td>$70,000</td>
+  <td>$36.46</td>
+  
+    </tr>
+        <tr>
+       <td>$75,000</td>
+  <td>$39.06</td>
+  
+    </tr>
+        <tr>
+       <td>$80,000</td>
+  <td>$41.67</td>
+  
+    </tr>
+        <tr>
+       <td>$85,000</td>
+  <td>$44.27</td>
+  
+    </tr>
+        <tr>
+       <td>$90,000</td>
+  <td>$46.88</td>
+  
+    </tr>
+        <tr>
+       <td>$95,000</td>
+  <td>$49.40</td>
+  
+    </tr>
+        <tr>
+       <td>$100,000</td>
+  <td>$33.85</td>
+                  
+  </table>
