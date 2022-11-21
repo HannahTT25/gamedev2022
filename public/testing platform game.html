@@ -1,7 +1,8 @@
 <html>
+	
 <head>
 	<title>Platform Game V.2</title>
-  Version 0.0.1-2
+  Version 0.0.1-3
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <style>
@@ -26,8 +27,7 @@
 	<script type="text/javascript" src="game.js"></script>
 
 </body>
-</html>
-
+<script>
 //main screen
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
@@ -84,3 +84,60 @@ function loop(){
 function clearCanvas(){
 	context.clearRect(0, 0, 640, 360);
 }
+//game loop
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+var gameStarted = false;
+var keys = [];
+var friction = 0.8;
+
+var player = {
+	x: 5,
+	y: canvas.height - 20,
+	width: 20,
+	height: 20,
+	speed: 5,
+	velX: 0,
+	velY: 0,
+	color: "#ff0000",
+	draw: function(){
+		context.fillStyle = this.color;
+		context.fillRect(this.x, this.y, this.width, this.height);
+	}
+}
+
+document.body.addEventListener("keydown", function(event){
+
+	if(event.keyCode == 13 && !gameStarted){
+		startGame();
+	}
+	keys[event.keyCode] = true;
+
+});
+
+document.body.addEventListener("keyup", function(event){
+	keys[event.keyCode] = false;
+});
+
+intro_screen();
+
+function intro_screen(){
+	context.font = "50px Impact";
+	context.fillStyle = "#0099CC";
+	context.textAlign = "center";
+	context.fillText("HTML5 Game", canvas.width/2, canvas.height/2);
+
+	context.font = "20px Arial";
+	context.fillText("Press Enter To Start", canvas.width/2, canvas.height/2 + 50);
+}
+
+function startGame(){
+	gameStarted = true;
+	clearCanvas();
+
+	setInterval(function(){
+		clearCanvas();
+		loop();
+	}, 1000/30)
+}
+	</script>
