@@ -53,17 +53,17 @@ var gameStarted = false;
 var keys = [];
 var friction = 0.8;
 var gravity = 0.98;
+var completed = false;
 
 var player = {
-  
 	x: 5,
-	y: canvas.height - 20,
+	y: canvas.height - 25,
 	width: 20,
 	height: 20,
 	speed: 5,
 	velX: 0,
 	velY: 0,
-	color: "#a454ac",
+	color: "#f06292",
 	jumping: false,
 	grounded: false,
 	jumpStrength: 7,
@@ -73,6 +73,17 @@ var player = {
 	}
 }
 
+var goal = {
+	x: canvas.width-80,
+	y: 5,
+	width:30,
+	height:35,
+	color: "#ec407a",
+	draw: function(){
+		context.fillStyle = this.color;
+		context.fillRect(this.x, this.y, this.width, this.height);
+	}
+}
 
 var platforms = [];
 var platform_width = 120;
@@ -147,6 +158,9 @@ document.body.addEventListener("keydown", function(event){
 	if(event.keyCode == 13 && !gameStarted){
 		startGame();
 	}
+	if(event.keyCode == 13 && completed){
+		reset();
+	}
 	keys[event.keyCode] = true;
 
 });
@@ -159,12 +173,12 @@ intro_screen();
 
 function intro_screen(){
 	context.font = "50px Impact";
-	context.fillStyle = "#fc34a4";
+	context.fillStyle = "#e91e63";
 	context.textAlign = "center";
-	context.fillText("Pixel Jump", canvas.width/2, canvas.height/2);
+	context.fillText("Pink-xel Jump", canvas.width/2, canvas.height/2);
   
   	context.font = "20px Arial";
-	context.fillText("Version 0.0.2-54", canvas.width/8, canvas.height/2 + 175);
+	context.fillText("Version 0.0.2-55", canvas.width/8, canvas.height/2 + 175);
   
 
 	context.font = "20px Arial";
@@ -179,8 +193,32 @@ function startGame(){
 
 }
 
+function complete(){
+	clearCanvas();
+	completed = true;
+
+	context.font = "50px Impact";
+	context.fillStyle = "#e91e63";
+	context.textAlign = "center";
+	context.fillText("You Beat Level 1!", canvas.width/2, canvas.height/2);
+
+	context.font = "20px Arial";
+	context.fillText("Press Enter to Play Again", canvas.width/2, canvas.height/2 + 100);
+}
+
+function reset(){
+	player.x = 5;
+	player.y = canvas.height-25;
+	player.grounded = true;
+	player.velY = 0;
+	player.velX = 0;
+	completed = false;
+
+	requestAnimationFrame(loop);
+}
+
 function draw_platforms(){
-	context.fillStyle = "#653053";
+	context.fillStyle = "#e91e63";
 
 	for(var i = 0; i < platforms.length; i++){
 		context.fillRect(platforms[i].x, platforms[i].y, platforms[i].width, platforms[i].height);
@@ -192,6 +230,7 @@ function loop(){
 	clearCanvas();
 	draw_platforms();
 	player.draw();
+	goal.draw();
 
 	if(keys[38] || keys[32]){
 		if(!player.jumping){
@@ -237,7 +276,13 @@ function loop(){
 		player.velY = 0;
 	}
 
-	requestAnimationFrame(loop);
+	if(collisionCheck(player, goal)){
+		complete();
+	}
+
+	if(!completed){
+		requestAnimationFrame(loop);
+	}
 
 }
 
