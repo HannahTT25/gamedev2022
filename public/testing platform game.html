@@ -27,3 +27,15 @@
 
 </body>
 </html>
+
+//main screen
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+context.font = "50px Impact";
+context.fillStyle = "#F1B6AC";
+context.textAlign = "center";
+context.fillText("Platform Game", canvas.width/4, canvas.height/4);
+
+context.font = "20px Arial";
+context.fillText("Press Enter To Start", canvas.width/2, canvas.height/2 + 100);
