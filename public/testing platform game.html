@@ -57,16 +57,6 @@ document.body.addEventListener("keydown", function(event){
 
 intro_screen();
 
-function intro_screen(){
-	context.font = "50px Impact";
-	context.fillStyle = "#0099CC";
-	context.textAlign = "center";
-	context.fillText("HTML5 Game", canvas.width/2, canvas.height/2);
-
-	context.font = "20px Arial";
-	context.fillText("Press Enter To Start", canvas.width/2, canvas.height/2 + 50);
-}
-
 function startGame(){
 	gameStarted = true;
 	clearCanvas();
@@ -120,16 +110,6 @@ document.body.addEventListener("keyup", function(event){
 });
 
 intro_screen();
-
-function intro_screen(){
-	context.font = "50px Impact";
-	context.fillStyle = "#0099CC";
-	context.textAlign = "center";
-	context.fillText("HTML5 Game", canvas.width/2, canvas.height/2);
-
-	context.font = "20px Arial";
-	context.fillText("Press Enter To Start", canvas.width/2, canvas.height/2 + 50);
-}
 
 function startGame(){
 	gameStarted = true;
