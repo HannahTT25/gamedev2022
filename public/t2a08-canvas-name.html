@@ -1,5 +1,5 @@
-
 <h2 align=center>t2a08-canvas by Fred</h2>
+Version 0.0.1-4
 You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".lineTo(30,200)" onclick="{
@@ -48,11 +48,25 @@ You use loops and variables to make fast fancy drawings <br><br>
    // reset fillstyle
    myContext.fillStyle = 'black';
 }"><br><br>
-
 <input type=button value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
 }">
-
+<input type=button value="rect(10, 20, 150, 100)" onclick="{
+   myContext.fillStyle = 'pink';
+   myContext.rect(10, 20, 300, 100);
+   myContext.fill();                            
+}">
+<input type=button value="ellipse(60, 75, 50, 30, Math.PI * .25, 0, Math.PI * 1.5);" onclick="{
+myContext.fillStyle = 'brown';
+myContext.beginPath();
+myContext.ellipse(800, 450, 50, 30, Math.PI * .25, 0, Math.PI * 1.5);
+myContext.fill();                        
+}">
+<input type=button value="ellipse(400, 500, 50, 75, Math.PI / 4, 0, 2 * Math.PI)" onclick="{
+myContext.beginPath();
+myContext.ellipse(400, 500, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
+myContext.stroke();                                                                                                                                                      
+ }">                                                           
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
