@@ -7,18 +7,36 @@ function calcSalary() {
  document.getElementById('results').innerHTML = calculate;
 }
 </script>
-Version 0.0.1-3
+Version 0.0.1-5
 <h1 align=center>t2a12-pay-by-fred.html</h1>
 <div id="fulldiv">
- <p> Enter the following information to calculate your annual salary.<br> Assuming you took 4 weeks off total for vacation and holidays of your 52 weeks in a year.</p>
+ <p> Enter the following information to calculate your annual salary.<br> Assuming you took 4 weeks off total for vacation and holidays out of your 52 weeks in a year.</p>
  <label for="txt_wage">Hourly Wage:</label>
  <input type="text" name="wage" id="txt_wage" value ="0.00"/>
-					
+	<br>				
  <label for="txt_hours">Hours Per Week:</label>
- <input type="text" name="hours" id="txt_hours" value= "0.0"/>   
+ <input type="text" name="hours" id="txt_hours" value= "0.00"/>   
   <br/><br/>
  <button value="calculate" onclick="calcSalary()">Calculate</button>
  <p id="results"></p>
+  
+  <p>Enter your annual salary<br></p>
+<input type="text" id="amount" value="0.00" />
+<input type="button" id="button" value="Calculate Tax (5%)" />
+<p id="result"></p>
+<script>
+function calculateTax() {
+var amount =
+parseFloat(document.getElementById("amount").value);
+var tax = amount * 0.1;
+var total = tax + amount;
+document.getElementById("result").innerHTML =
+"tax = " + tax + " and total is " + total;
+}
+document.getElementById("button").addEventListener(
+"click",calculateTax);
+</script>
+	
 </div>
 
 <br>
