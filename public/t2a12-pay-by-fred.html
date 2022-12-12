@@ -7,7 +7,7 @@ function calcSalary() {
  document.getElementById('results').innerHTML = calculate;
 }
 </script>
-Version 0.0.1-5
+Version 0.0.1-6
 <h1 align=center>t2a12-pay-by-fred.html</h1>
 <div id="fulldiv">
  <p> Enter the following information to calculate your annual salary.<br> Assuming you took 4 weeks off total for vacation and holidays out of your 52 weeks in a year.</p>
@@ -22,13 +22,13 @@ Version 0.0.1-5
   
   <p>Enter your annual salary<br></p>
 <input type="text" id="amount" value="0.00" />
-<input type="button" id="button" value="Calculate Tax (5%)" />
+<input type="button" id="button" value="Calculate Tax GST(5%) + PST(7%)" />
 <p id="result"></p>
 <script>
 function calculateTax() {
 var amount =
 parseFloat(document.getElementById("amount").value);
-var tax = amount * 0.1;
+var tax = amount * 0.12;
 var total = tax + amount;
 document.getElementById("result").innerHTML =
 "tax = " + tax + " and total is " + total;
