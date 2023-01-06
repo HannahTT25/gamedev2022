@@ -1,7 +1,6 @@
-
 <html>
 <head>
-	<title>Platform Game</title>
+	<title>Pixelated Odyssey</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <style>
@@ -74,7 +73,7 @@ var player = {
 		context.fillRect(this.x, this.y, this.width, this.height);
 	}
 }
-
+//end goal
 var goal = {
 	x: canvas.width-80,
 	y: 5,
@@ -124,7 +123,7 @@ platforms.push({
     height: platform_height,
 });
 
-// Floor
+//floor
 platforms.push({
 	x: 0,
 	y: canvas.height-5,
@@ -132,7 +131,7 @@ platforms.push({
 	height: platform_height
 });
 
-// Left Wall
+//left wall
 platforms.push({
 	x: -10,
 	y: 0,
@@ -140,7 +139,7 @@ platforms.push({
 	height: canvas.height
 });
 
-// Left Wall
+//left wall
 platforms.push({
 	x: canvas.width,
 	y: 0,
@@ -148,21 +147,24 @@ platforms.push({
 	height: canvas.height
 });
 
-// Floor
+//floor
 platforms.push({
 	x: 0,
 	y: -10,
 	width: canvas.width,
 	height: platform_height
 });
-
+//start event listener enter
 document.body.addEventListener("keydown", function(event){
 
 	if(event.keyCode == 13 && !gameStarted){
 		startGame();
 	}
-	if(event.keyCode == 13 && completed){
+	if(event.keyCode == 82 && completed){
 		reset();
+	}
+  	if(event.keyCode == 13 && completed){
+		nextlevel();
 	}
 	keys[event.keyCode] = true;
 
@@ -171,14 +173,14 @@ document.body.addEventListener("keydown", function(event){
 document.body.addEventListener("keyup", function(event){
 	keys[event.keyCode] = false;
 });
-
+//main menu
 intro_screen();
 
 function intro_screen(){
 	context.font = "50px Impact";
 	context.fillStyle = "#e91e63";
 	context.textAlign = "center";
-	context.fillText("Pink-xel Jump", canvas.width/4, canvas.height/6);
+	context.fillText("Pixelated Odyssey", canvas.width/3, canvas.height/6);
     	context.font = "20px Arial";
   
 	context.fillText("Use the Arrow Keys to move", canvas.width/4, canvas.height/6 + 75);
@@ -198,7 +200,7 @@ function intro_screen(){
 function startGame(){
 	gameStarted = true;
 	clearCanvas();
-
+//loops to game starting
 	requestAnimationFrame(loop);
 
 }
@@ -210,10 +212,11 @@ function complete(){
 	context.font = "50px Impact";
 	context.fillStyle = "#e91e63";
 	context.textAlign = "center";
-	context.fillText("You Beat Level 1!", canvas.width/2, canvas.height/2);
+	context.fillText("You Beat Level 2!", canvas.width/2, canvas.height/2);
 
 	context.font = "20px Arial";
-	context.fillText("Press Enter to Play Again", canvas.width/2, canvas.height/2 + 100);
+	context.fillText("Press R to Play Again or Enter for next level", canvas.width/2, canvas.height/2 + 100);
+
 }
 
 function reset(){
@@ -227,6 +230,12 @@ function reset(){
 	requestAnimationFrame(loop);
 }
 
+function nextlevel(){
+  location = 'testing platform game level3.html'
+	completed = false;
+
+	requestAnimationFrame(loop);
+}
 function draw_platforms(){
 	context.fillStyle = "#e91e63";
 
