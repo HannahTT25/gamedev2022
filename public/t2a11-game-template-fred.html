@@ -1,19 +1,22 @@
-<h6> Version 0.0.1-5 </h6>
+<html>
+    <head>
+        <title>Pixelated Odyssey</title>
+        <style>
+            
+        </style>
+    </head>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/03/chevron-pattern.png?fit=2400%2C1200&ssl=1">
+    <body>
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUiIiLuYaiQAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
 
-<h1 align=center>t2a11 Game Template by Fred</h1>
+  <h1 align=center>Pixelated Odyssey</h1>
 <br><br><br><br>
 
 <script>
-
-   // global variables here
    let myGlobalX = 0
    let myClock
 
-
-   // global functions here
-function myHitOther(my1,my2){
+function goal(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
    top1    = parseInt(document.getElementById(my1).style.top)   
@@ -32,30 +35,24 @@ function myHitOther(my1,my2){
 
 
 function myCheckHit(){
-   if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')  
+   if ( goal('myImg01','myImg02') ){
+       alert('you win!')  
        document.getElementById('myImg01').style.left = '20px'
-       location = 't2a13-keydown.html'  // go to your next level
+       location = 'testing platform game level2.html'  
    }
-
-
-   // more if statements here like the above
-
-
-
-}  // end of myCheckHit()
+}
 
 
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://toppng.com/uploads/preview/cute-santa-claus-vector-11549780448rl38prqquy.png">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/24303.png">
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:100px;"  src="https://htmlcolors.com/color-image/f06292.png">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:1000px;" src="https://htmlcolors.com/color-image/e91e63.png">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
   myClock = setInterval(function(){
-      myGlobalX -= 5
+      myGlobalX -= 4
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 50)
@@ -65,5 +62,5 @@ function myCheckHit(){
 
 <input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
+  myCheckHit()   
 }"><br><br>
