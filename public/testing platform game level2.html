@@ -204,7 +204,7 @@ function startGame(){
 	requestAnimationFrame(loop);
 
 }
-
+//is game done?
 function complete(){
 	clearCanvas();
 	completed = true;
@@ -218,7 +218,7 @@ function complete(){
 	context.fillText("Press R to Play Again or Enter for next level", canvas.width/2, canvas.height/2 + 100);
 
 }
-
+//run it back
 function reset(){
 	player.x = 5;
 	player.y = canvas.height-25;
@@ -229,7 +229,7 @@ function reset(){
 
 	requestAnimationFrame(loop);
 }
-
+//next level
 function nextlevel(){
   location = 'testing platform game level3.html'
 	completed = false;
@@ -243,7 +243,7 @@ function draw_platforms(){
 		context.fillRect(platforms[i].x, platforms[i].y, platforms[i].width, platforms[i].height);
 	}
 }
-
+//restart
 function loop(){
 
 	clearCanvas();
