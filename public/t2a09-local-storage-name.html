@@ -1,5 +1,5 @@
 <html>
- Version 0.0.1-7
+ Version 0.0.1-8
    
    <head><title>t2a09-local-storage-name.html</title>
    </head>
@@ -23,7 +23,11 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
    document.getElementById('myText1').value = ''
 }">
-
+  
+ <input type=button value="Delete the stored value" onclick="{
+                                                              localStorage.setItem('myStoredText', '' )
+                                                             document.getElementById('myText1').value = '' 
+                                                             }"> 
 <input type="button" value="Retrieve Text" onClick="{
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> 
@@ -41,7 +45,7 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
                                                               localStorage.setItem('myStoredText2', '' )
                                                              document.getElementById('myText02').value = '' 
                                                              }"> 
-      <input type="button" value="Retrieve Text" onClick="{
+      <input type="button" value="Retrieve Text" onclick="{
       document.getElementById('myText02').value = localStorage.getItem('myStoredText2')
    }">
    </html> 
