@@ -75,7 +75,7 @@ var player = {
 }
 //end goal
 var goal = {
-	x: canvas.width-80,
+	x: canvas.width-500,
 	y: 5,
 	width:30,
 	height:35,
@@ -85,6 +85,20 @@ var goal = {
 		context.fillRect(this.x, this.y, this.width, this.height);
 	}
 }
+//spikes
+var spike = {
+	x: canvas.width-320,
+	y: 5,
+	width:30,
+	height:35,
+	color: "#808080",
+	draw: function(){
+		context.fillStyle = this.color;
+		 context.clearRect(0, 0, this.width, this.height);
+	}
+}
+
+
 //platform variables
 var platforms = [];
 var platform_width = 120;
@@ -110,20 +124,20 @@ platforms.push({
     height: platform_height,
 });
 platforms.push({
-    x: canvas.width-380,
+    x: canvas.width-400,
     y: canvas.height-120,
     width: platform_width,
     height: platform_height,
 });
 platforms.push({
-    x: canvas.width-380,
+    x: canvas.width-450,
     y: canvas.height-240,
     width: platform_width,
     height: platform_height,
 });
 
 platforms.push({
-    x: canvas.width-590,
+    x: canvas.width-200,
     y: canvas.height-180,
     width: platform_width,
     height: platform_height,
